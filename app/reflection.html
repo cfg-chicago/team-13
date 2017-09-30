@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+    <html lang="en">
+
+      <head>
+        <title>Embarc Journey</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+        <link rel="stylesheet" type="text/css" href="https://static.ctctcdn.com/h/contacts-embedded-signup-assets/1.0.2/css/signup-form.css">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="reflection.css">
+      </head>
+
+      <body>
+
+      <div class="container">
+
+
+      <!-- ***** ***** NAVIGATION BAR  ***** ***** -->
+
+      <!-- navbar menu starts from here -->
+      <div class="nav-class">
+        <nav class="navbar navbar-fixed-top" role="navigation">
+          <div class="navbar-header">
+            <a href="slideshow.html" class="navbar-left pull-left">
+              EMBARC
+            </a>
+
+            <button id="menu-toggle" type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+            </button>
+
+          </div><!--close navbar-header-->
+            
+            
+
+          <div class="navbar-collapse collapse">
+            <div class="nav-wrapper">
+              <ul class="nav navbar-nav pull-right">
+                <li><a class="menu-tab" href="slideshow.html">Journey Memories</a></li>
+                <li><a class="menu-tab" href="create_memory.html">Create Memory</a></li>
+                <li><a class="menu-tab" href="feedback.html">Feedback</a></li>
+                <li class="active"><a class="menu-tab" href="reflection.html">Reflection</a></li>
+                <li><a class="menu-tab" href="../pages/login.html">Log-in</a></li>
+
+              </ul>
+            </div>
+          </div><!-- close navbar-collapse collapse-->
+
+        </nav>
+      </div><!-- close nav-class -->
+
+        <!-- ***** ***** MIDDLE CONTENT BOXES SECTION ***** ***** -->
+
+        <div class="content-window">
+          <div class="row align-items-center content-row">
+            <div class="col-md-12 col-sm-12 col-xs-12 content-box">
+              <h1 class="page-header">REFLECTION</h1>
+            </div>
+          </div>  
+          <div class="row align-items-center content-row">
+            <div class="col-md-12 col-sm-12 col-xs-12 content-box">
+              <form id="reflect_form">
+                <div class="reflect_question">Describe your journey from start to finish. Use descriptive language and names of individuals you met.
+                      Describe your experience with vivid detail so someone that did not attend could experience it through your writing.<br>
+                <textarea class="reflect_box" name="reflect_1" form="reflect_form"></textarea> </div> <br> <br>
+                <div class="reflect_question">Describe what you learned or what may have surprised you.<br>
+                <textarea class="reflect_box" name="reflect_2" form="reflect_form"></textarea> </div><br> <br>
+                <input type="submit" value="Submit Response">
+              </form>
+            </div><!-- close content-box-->
+          </div><!-- close content-row -->
+        </div><!-- close content-window -->
+
+        </div><!-- close container -->
+        <script src="index.js"> </script>
+      </body>
+
+    </html>
