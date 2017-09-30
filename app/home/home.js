@@ -43,6 +43,10 @@ $routeProvider.otherwise({
         redirectTo: '/home'
     });
 
+$scope.redirectToMemories = function () {
+   $location.path('/memories');
+};
+
 <script src="home/home.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
 
