@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+    <html lang="en">
+
+      <head>
+        <title>Embarc Journey</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+        <link rel="stylesheet" type="text/css" href="https://static.ctctcdn.com/h/contacts-embedded-signup-assets/1.0.2/css/signup-form.css">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="image-picker.css">
+        <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+      </head>
+
+      <body>
+
+      <div class="container">
+
+
+      <!-- ***** ***** NAVIGATION BAR  ***** ***** -->
+
+      <!-- navbar menu starts from here -->
+      <div class="nav-class">
+        <nav class="navbar navbar-fixed-top" role="navigation">
+          <div class="navbar-header">
+            <a href="slideshow.html" class="navbar-left pull-left">
+              EMBARC
+            </a>
+
+            <button id="menu-toggle" type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+            </button>
+
+          </div><!--close navbar-header-->
+            
+            
+
+          <div class="navbar-collapse collapse">
+            <div class="nav-wrapper">
+              <ul class="nav navbar-nav pull-right">
+                <li><a class="menu-tab" href="slideshow.html">Journey Memories</a></li>
+                <li class="active"><a class="menu-tab" href="create_memory.html">Create Memory</a></li>
+                <li><a class="menu-tab" href="feedback.html">Feedback</a></li>
+                <li><a class="menu-tab" href="reflection.html">Reflection</a></li>
+                <li><a class="menu-tab" href="../pages/login.html">Log-in</a></li>
+                  
+              </ul>
+            </div>
+          </div><!-- close navbar-collapse collapse-->
+
+        </nav>
+      </div><!-- close nav-class -->
+
+        <!-- ***** ***** MIDDLE CONTENT BOXES SECTION ***** ***** -->
+
+        <div class="content-window">
+          <div class="row align-items-center content-row">
+            <div class="col-md-12 col-sm-12 col-xs-12 content-box">
+              <h1 class="page-header">CREATE MEMORY</h1>
+            </div>
+          </div>  
+          <div class="row align-items-center content-row">
+            <div class="col-md-12 col-sm-12 col-xs-12 content-box" id="photobox" style="max-height:500px; display:none;">
+              <select id="image_picker" class="image-picker masonry" data-limit="10" multiple="multiple" style="display:none;">
+                <!-- <option data-img-src="url" value="1"></option> -->
+              </select>
+              <!-- <button onclick="picker();">Pull Journey Images</button> -->
+              <!-- <button onclick="">Create my slideshow!</button> -->
+            </div><!-- close content-box-->
+          </div><!-- close content-row -->
+          <div class="row align-items-center content-row">
+            <div class="col-md-12 col-sm-12 col-xs-12 content-box">
+              <button onclick="picker();">Pull Journey Images</button>
+              <button onclick="">Create my slideshow!</button>
+            </div><!-- close content-box-->
+          </div><!-- close content-row -->
+        </div><!-- close content-window -->
+
+        </div><!-- close container -->
+        <script src="image-picker.js"></script>
+        <script>
+          var config = {
+            apiKey: "AIzaSyBBtvu_hYi6UTORj7wrWbi9lMkv8w98a7M",
+            authDomain: "codeforgoodembarc-85ea7.firebaseapp.com",
+            databaseURL: "https://codeforgoodembarc-85ea7.firebaseio.com",
+            projectId: "codeforgoodembarc-85ea7",
+            storageBucket: "codeforgoodembarc-85ea7.appspot.com",
+            messagingSenderId: "487898887337"
+          };
+          firebase.initializeApp(config);
+          var select_obj = document.getElementById("image_picker");
+          // console.log(select_obj);
+          var storage = firebase.storage();
+          var index2 = 0;
+          for(var index = 0; index < 12; index++) {
+            var gsReference = storage.refFromURL('gs://codeforgoodembarc-85ea7.appspot.com/journey1/photo'+index+'.jpg');
+            // console.log('before set attr ' + index);
+            gsReference.getDownloadURL().then(function(url) {
+              var optn = document.createElement("option");
+              optn.setAttribute('data-img-src', url);
+              optn.setAttribute('value', index2);
+              index2++;
+            // console.log('after set attr ' + index);
+
+              // console.log(optn);
+              select_obj.appendChild(optn);
+            }).catch(function(error) {
+                switch (error.code) {
+                    default:
+                        break;
+                }
+            });
+          
+          }
+        // </script>
+        <script>
+        function picker() {
+          $('#photobox').css('display','inline');
+          $('#photobox').css('overflow','scroll');
+          $("select").imagepicker();
+        }
+        </script>
+      </body>
+
+    </html>

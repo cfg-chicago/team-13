@@ -1,3 +1,6 @@
+.image_picker_image {
+  max-width: 350px !important;
+}
 ul.thumbnails.image_picker_selector {
   overflow: auto;
   list-style-image: none;
