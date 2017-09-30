@@ -24,7 +24,8 @@ angular.module('myApp.home', ['ngRoute'])
  
 // Home controller
 .controller('HomeCtrl', ['$scope','$firebaseSimpleLogin',function($scope,$firebaseSimpleLogin) {
-  var firebaseObj = new Firebase("https://blistering-heat-2473.firebaseio.com");
+  console.log('Check');
+  var firebaseObj = new Firebase("https://codeforgoodembarc-85ea7.firebaseio.com");
   var loginObj = $firebaseSimpleLogin(firebaseObj);
   
   $scope.user = {};
@@ -62,6 +63,5 @@ $routeProvider.otherwise({
         redirectTo: '/home'
     });
 
-<script src="home/home.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
 
