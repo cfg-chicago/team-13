@@ -8,9 +8,9 @@
     <title>Embarc Journey Portal</title>
  
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
+<!--     <link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet"> -->
  
-    <link href="justified-nav.css" rel="stylesheet">
+    <link href="../justified-nav.css" rel="stylesheet">
  
 </head>
  
@@ -26,7 +26,8 @@
             <label class="checkbox">
                 <a href="#"> Sign Up</a>
         </label>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <button type="button" ng-click="SignIn($event)" class="btn btn-lg btn-primary btn-block">Sign In</button>
+
       </form>
  
     </div>
