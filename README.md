@@ -1,3 +1,27 @@
+Team Members:
+
+
+
+Files:
+./vendor, ./pages, ./startboostrap-sb-admin-2, ./less, ./js, ./dist
+	admin side website materials
+./reflection_slideshow
+	user side webpages being worked on
+./app/memories: working on carousel
+./app/home: home page with sign up and angular stuff
+./app/register: signup stuff
+
+
+Get rid of:
+starboostrap-sb-admin-2: empty
+./app/feedback: empty
+./app/reflections: old reflections files
+./app/feedback.*: empty
+./app/reflection.*: empty
+./app/index.html: skeleton index
+./app/index-async.html: skeleton index
+
+
 # bootstrap template used for admin portal: 
 # [Start Bootstrap](http://startbootstrap.com/) - [SB Admin 2](http://startbootstrap.com/template-overviews/sb-admin-2/)
 [![CDNJS](https://img.shields.io/cdnjs/v/startbootstrap-sb-admin-2.svg)](https://cdnjs.com/libraries/startbootstrap-sb-admin-2)
