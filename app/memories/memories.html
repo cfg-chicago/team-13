@@ -40,7 +40,7 @@
         </div>
         <script>
             var storage = firebase.storage();
-            var gsReference = storage.refFromURL('gs://codeforgoodembarc-85ea7.appspot.com/journey1/21015746_1507731392616687_8886227317419440316_o.jpg');
+            var gsReference = storage.refFromURL('gs://codeforgoodembarc-85ea7.appspot.com/journey1/photo0.jpg');
 
             gsReference.getDownloadURL().then(function(url) {
                 document.getElementById("photo").src = url;
