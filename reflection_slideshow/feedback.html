@@ -17,6 +17,7 @@
 
         <link rel="stylesheet" type="text/css" href="https://static.ctctcdn.com/h/contacts-embedded-signup-assets/1.0.2/css/signup-form.css">
         <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="reflection.css">
       </head>
 
       <body>
@@ -30,7 +31,7 @@
       <div class="nav-class">
         <nav class="navbar navbar-fixed-top" role="navigation">
           <div class="navbar-header">
-            <a href="index.html" class="navbar-left pull-left">
+            <a href="slideshow.html" class="navbar-left pull-left">
               EMBARC
             </a>
 
@@ -39,17 +40,16 @@
             </button>
 
           </div><!--close navbar-header-->
-            
-            
+
+
 
           <div class="navbar-collapse collapse">
             <div class="nav-wrapper">
               <ul class="nav navbar-nav pull-right">
-                <li class="active"><a class="menu-tab" href="index.html">Home</a></li>
                 <li><a class="menu-tab" href="slideshow.html">Slideshow</a></li>
-                <li><a class="menu-tab" href="feedback.html">Feedback</a></li>
-                <li><a class="menu-tab" href="reflection.html">Reflection</a></li>
-                  
+                <li class="active"><a class="menu-tab" href="feedback.html">Feedback</a></li>
+                <li ><a class="menu-tab" href="reflection.html">Reflection</a></li>
+
               </ul>
             </div>
           </div><!-- close navbar-collapse collapse-->
@@ -62,7 +62,20 @@
         <div class="content-window">
           <div class="row align-items-center content-row">
             <div class="col-md-12 col-sm-12 col-xs-12 content-box">
-              Hello World!
+              <h1 class="page-header">FEEDBACK</h1>
+            </div>
+          </div>
+          <div class="row align-items-center content-row">
+            <div class="col-md-12 col-sm-12 col-xs-12 content-box">
+              <form id="reflect_form">
+                <div class="reflect_question">Why did you give this journey this rating?<br>
+                <textarea class="reflect_box" name="reflect_1" form="reflect_form"></textarea> </div> <br> <br>
+                <div class="reflect_question">What did you like best about this journey?<br>
+                <textarea class="reflect_box" name="reflect_2" form="reflect_form"></textarea> </div><br> <br>
+                <div class="reflect_question">What would you add to this journey or how would you improve it?
+                <textarea class="reflect_box" name="reflect_3" form="reflect_form"></textarea></div> <br><br>
+                <input type="submit" value="Submit Response">
+              </form>
             </div><!-- close content-box-->
           </div><!-- close content-row -->
         </div><!-- close content-window -->
@@ -71,4 +84,3 @@
         <script src="index.js"> </script>
       </body>
 
-    </html>
