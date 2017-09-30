@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html lang="en">
 
 <head>
@@ -20,7 +20,37 @@
         <div class="jumbotron" style="padding-bottom:50px;">
             <h2 align="middle">Embarc Journey Portal</h2>
         </div>
-        <img> </img>
+        <h2 align="middle" style="margin-bottom:30px;">Your Memories!</h2>
+
+        <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyBBtvu_hYi6UTORj7wrWbi9lMkv8w98a7M",
+            authDomain: "codeforgoodembarc-85ea7.firebaseapp.com",
+            databaseURL: "https://codeforgoodembarc-85ea7.firebaseio.com",
+            projectId: "codeforgoodembarc-85ea7",
+            storageBucket: "codeforgoodembarc-85ea7.appspot.com",
+            messagingSenderId: "487898887337"
+          };
+          firebase.initializeApp(config);
+        </script>
+        <div>
+            <img class="center" id="photo" src="url" style="width:500px; margin:auto; display:block;"/>
+        </div>
+        <script>
+            var storage = firebase.storage();
+            var gsReference = storage.refFromURL('gs://codeforgoodembarc-85ea7.appspot.com/journey1/21015746_1507731392616687_8886227317419440316_o.jpg');
+
+            gsReference.getDownloadURL().then(function(url) {
+                document.getElementById("photo").src = url;
+            }).catch(function(error) {
+                switch (error.code) {
+                    default:
+                        break;
+                }
+            });
+        </script>
     </div>
 
 </body></html>
